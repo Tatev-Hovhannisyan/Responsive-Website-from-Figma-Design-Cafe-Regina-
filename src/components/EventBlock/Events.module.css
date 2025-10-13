@@ -1,0 +1,249 @@
+.eventsBlock {
+  margin-top: -3.625vw;
+  text-align: center;
+  padding: 3.90625vw 1.5625vw;
+  position: relative;
+  background-color: #0d0c0a;
+}
+
+.sliderControls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5625vw;
+  margin-bottom: 1.5625vw;
+}
+
+.circleBtn {
+  width: 3.90625vw;
+  height: 3.90625vw;
+  border-radius: 50%;
+  border: none;
+  background: #333;
+  color: #fff;
+  font-size: 1.5625vw;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.circleBtn:hover {
+  background: #555;
+}
+
+.circleBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.logoLeft,
+.logoRight {
+  position: absolute;
+  top: -13.28125vw;
+  z-index: 1;
+}
+
+.logoLeft {
+  left: 0;
+  
+}
+
+.logoRight {
+  right: 0;
+}
+
+.logoLeft img,
+.logoRight img {
+  height: 34.921875vw !important;
+  width: auto !important;
+  max-width: none;
+  display: block;
+  filter: brightness(1.8) contrast(1.2);
+}
+
+
+.eventsHeading {
+  display: block;
+  margin: 4.6875vw auto 2.34375vw;
+  width: 46.875vw;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+  top: auto;
+}
+
+.sliderWrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.eventHeader {
+  width: 100%;
+  max-width: 50vw;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* центрируем */
+}
+
+.eventsSlider {
+  display: flex;
+  gap: 1.5625vw;
+  transition: transform 0.5s ease;
+  flex-wrap: nowrap;
+  width: max-content;
+}
+
+.eventCard {
+  flex: 0 0 clamp(220px, 18vw, 280px);
+  width: auto;
+  background: transparent;
+  color: #fff;
+  text-align: left;
+}
+
+.eventCard img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.eventDate {
+ font-size: clamp(1.2vw, 1.5vw, 1.9vw);/* пропорционально */
+  font-weight: lighter;
+  color: #a3a2a2;
+  margin: 0.390625vw 0;
+  text-align: left;
+}
+
+.eventTitle {
+  font-family: "Harmond", serif;
+  font-size: clamp(1.5vw, 2.109375vw, 2.5vw); /* пропорционально */
+  margin: 0.390625vw 0 0.78125vw;
+  line-height: 1.2;
+  display: inline-block;
+  transform: scaleX(0.6);
+  transform-origin: left;
+}
+
+.readMoreRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1.5625vw;
+}
+
+.readMoreLink {
+  text-decoration: none;
+}
+
+.contactLabel {
+  font-size: clamp(1.1vw, 1.4vw, 1.6vw);
+  color: rgb(220, 202, 135);
+  letter-spacing: 0.31vw;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.contactLabel:hover {
+  color: #fff;
+}
+
+/* ======================== Адаптивность ======================== */
+
+@media (max-width: 1024px) {
+  .eventsSlider {
+    gap: 1.5625vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: none !important;
+    width: auto;
+  }
+
+  .eventCard {
+    flex: 0 0 45%;
+    width: auto;
+  }
+
+  .eventCard img {
+    width: 100%;
+    height: auto;
+  }
+
+  .eventTitle {
+    transform: none;
+  }
+
+ 
+  .logoLeft,
+  .logoRight {
+    display: none;
+  }
+
+  .eventsHeading {
+    width: 90%;
+    margin: 2.34375vw auto;
+  }
+}
+
+@media (max-width: 786px) {
+  .eventsSlider {
+    flex-wrap: wrap;
+    transform: none !important;
+    width: auto;
+    justify-content: center;
+  }
+
+  .eventCard {
+    flex: 0 0 45%;
+    width: auto;
+  }
+
+  .eventCard img {
+    width: 100%;
+    height: auto;
+  }
+
+  .eventDate {
+    font-size: clamp(0.9vw, 1vw, 1.1vw);
+    text-align: center;
+  }
+
+  .eventTitle {
+    font-size: clamp(1.3vw, 1.71875vw, 2vw);
+    transform: none;
+  }
+
+  .contactLabel {
+    font-size: clamp(0.9vw, 1.1vw, 1.3vw);
+  }
+
+  .circleBtn {
+    width: 3.125vw;
+    height: 3.125vw;
+    font-size: 1.25vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .eventHeader {
+    width: 100%;
+  }
+
+  .eventsBlock {
+    padding: 2.34375vw 0.78125vw;
+  }
+
+  .eventTitle {
+    font-size: 1.5625vw;
+  }
+
+  .contactLabel {
+    font-size: 1.09375vw;
+    letter-spacing: 0.15625vw;
+  }
+
+  .logoLeft,
+  .logoRight {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #040404;
+  font-family: "Inter", sans-serif;
+}
+
+body > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh; /* чтобы корневой контейнер всегда был на всю высоту */
+}

@@ -1,0 +1,33 @@
+.headerBackground {
+  
+  position: relative;
+  background-color: #040404;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;   /* ✅ чтобы фон всегда покрывал экран */
+  overflow-x: hidden;  /* ✅ подстраховка против горизонтального скролла */
+}
+
+.headerBackground::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0; /* вместо inset для надёжности */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  pointer-events: none; /* ✅ чтобы тень не блокировала клики */
+}
+
+.headerBackground > * {
+  position: relative;
+  z-index: 1; /* текст/контент поверх тени */
+}
+
+main {
+  position: relative;
+  overflow-x: hidden;
+  background-color: #040404; /* запасной фон, если у секции нет картинки */
+}
+main > * {
+  position: relative;
+  z-index: 2; /* контент поверх фона */
+}

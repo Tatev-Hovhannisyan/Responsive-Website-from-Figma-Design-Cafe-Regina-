@@ -1,0 +1,338 @@
+.secondBlock {
+ 
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("/bg.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden; /* подстраховка против горизонтального скролла */
+}
+
+.secondBlockInner {
+    width: 100%;
+    max-width: 100%; 
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 0 1.56vw; 
+}
+
+.columnsWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.textsLeft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin-top: 14.84vw; /* вместо transform */
+    margin-left: 3.9vw;
+}
+
+.textsLeft img:nth-child(2) {
+height: 23vw;
+width: 23vw;
+  margin-left: 8vw; /* смещает только логотип */
+}
+
+
+.imagesCenter {
+
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 3.125vw;
+    align-items: center;
+}
+
+.centerImg1,
+.centerImg2 {
+
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.textsRight {
+  margin-top: 10vw;
+  margin-right: 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ❗ все по одной левой линии */
+  justify-content: flex-start;
+  gap: 20vw; /* одинаковое расстояние между блоками */
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ❗ левые края совпадают */
+  margin-right: 0; /* убираем возможные разные отступы */
+}
+
+.textBlock img {
+  display: block;
+  width: auto;
+  max-width: 20vw; /* если хочешь ограничить ширину */
+  height: auto;
+}
+
+.menuRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2vw;
+  margin-top: 1.5vw;
+  margin-right: 0; /* ❗ убери, если был — он сдвигал нижний блок */
+}
+
+
+.contactLabel {
+    color: rgb(220, 202, 135);
+    font-size: 1.4vw;
+    letter-spacing: 0.31vw;
+}
+
+.circleBtn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5vw;
+  height: 2.5vw;
+  border: 0.078vw solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  z-index: 2000;
+  position: relative;
+  font-size: 1.2vw; /* ✅ теперь стрелка масштабируется */
+  line-height: 1;
+}
+
+
+.circleBtn:hover {
+    background-color: rgb(207, 198, 198);
+    color: black;
+}
+
+.lineBlock {
+    width: 100%;
+    margin: 3.9vw 0;
+    padding: 0;
+    position: relative;
+    z-index: 3;
+}
+
+.lineBlock img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.centerBlock {
+  width: fit-content; /* ширина по контенту (по изображению) */
+  margin: 0 auto 3.125vw; /* центрируем блок */
+  position: relative;
+  z-index: 300;  
+  text-align: center; /* чтобы inline/inline-block элементы внутри были по центру */
+}
+
+.centerTextImg {
+  display: block;
+  width: 100%;       /* или нужная относительная ширина */
+  max-width: 46.875vw;
+  height: auto;
+  margin: 0 auto;   /* центрируем изображение внутри блока */
+}
+
+.readMoreRow {
+  display: flex;
+  justify-content: center; /* центрируем элементы внутри ряда */
+  align-items: center;
+  gap: 0.9375vw;
+  margin-top: 1.56vw;  /* отступ сверху */
+}
+
+
+.readMoreLink {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.readMoreLink:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.fullwidthBlock {
+    position: relative;
+    z-index: 10;
+}
+
+.fullwidthImg {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin-top: -15.28vw; /* заменили transform на margin-top */
+}
+
+.columnsWrapper img,
+.centerTextImg,
+.fullwidthImg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+@media (max-width: 1024px) {
+    .columnsWrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textsLeft {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 7.81vw;
+        align-items: center;
+        text-align: center;
+    }
+
+
+      .textsRight {
+    width: 30vw;         /* на планшете пошире */
+    margin-right: 0;     /* убираем большой отступ */
+    margin-top: 4vw;
+    gap: 8vw;            /* уменьшаем расстояния */
+    align-items: center; /* выравниваем по центру */
+  }
+
+
+    .logoCenter {
+        margin-left: 0;
+        max-width: 23.44vw;
+    }
+
+    .imagesCenter {
+        gap: 1.56vw;
+    }
+
+    .centerImg1 {
+        max-width: 100%;
+    }
+
+    .centerImg2 {
+        max-width: 90%;
+    }
+
+    .textsRight {
+        margin-right: 0;
+        margin-top: 3.9vw;
+        gap: 11.72vw;
+        align-items: center;
+    }
+
+    .menuRow {
+        flex-direction: row;
+        margin-right: 0;
+        gap: 1.56vw;
+    }
+
+    .centerBlock {
+
+        max-width: 50vw;
+    }
+
+    .centerTextImg {
+        max-width: 50vw; 
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    .columnsWrapper {
+        gap: 1.56vw;
+    }
+
+    .textsLeft {
+        margin-top: 6.25vw;
+    }
+
+    
+
+    .logoCenter {
+        max-width: 19.53vw;
+    }
+
+    .imagesCenter {
+        gap: 1.17vw;
+    }
+
+    .centerImg1 {
+        max-width: 100%;
+    }
+
+    .centerImg2 {
+        max-width: 80%;
+    }
+
+    .textsRight {
+        gap: 7.81vw;
+        margin-top: 2.34vw;
+    }
+
+    .menuRow {
+        flex-direction: row;
+        gap: 1.17vw;
+    }
+
+    .centerBlock {
+        margin-top: 0.78vw;
+    }
+
+    .centerTextImg {
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .textsLeft {
+        margin-top: 4.69vw;
+    }
+
+    .logoCenter {
+        max-width: 15.625vw;
+    }
+
+    .centerImg1,
+    .centerImg2 {
+        max-width: 90%;
+    }
+
+     .textsRight {
+    width: 100%;         /* на мобилках растягивается */
+    margin: 2vw auto 0;
+    gap: 4vw;
+    align-items: center;
+  }
+    .centerBlock {
+        margin-top: 0.39vw;
+    }
+
+    .centerTextImg {
+        max-width: 90%; 
+    }
+}

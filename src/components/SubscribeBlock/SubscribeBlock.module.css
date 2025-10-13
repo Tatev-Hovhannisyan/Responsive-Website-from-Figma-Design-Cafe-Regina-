@@ -1,0 +1,177 @@
+.subscribeBlock {
+  position: relative; /* чтобы lineLogo позиционировалась относительно блока */
+  background: url("/pexels.svg") no-repeat center center;
+  background-size: cover;
+}
+
+/* Внутренний блок */
+.subscribeBlockInner {
+  background-color: #000;
+  padding: 3.125vw 1.5vw;
+  box-shadow: 0 0.7vw 2.1vw rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+  max-width: 62.5vw;
+  width: 100%;
+  margin: 0 auto;
+  border: 0.07vw solid rgba(220, 202, 135, 0.25);
+}
+
+/* Линия сверху */
+.lineBlock {
+  position: absolute;
+  top: -9.3vh; /* примерно -63px → vh, можно корректировать */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+  width: 100%; /* сам блок шириной на 100% */
+  display: flex;
+  justify-content: center; /* чтобы logo по центру */
+}
+
+.lineLogo {
+  display: block;
+  width: 100vw; /* логотип занимает максимум 60% ширины экрана */
+  max-width: 1966px; /* не растягиваем больше базовой ширины */
+  height: auto;
+}
+/* Контейнер */
+.subscribeContainer {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6vw 1.5vw;
+}
+
+/* Тексты */
+.subText {
+  display: block;
+  margin: 0 auto;
+  max-width: 50vw;
+  text-align: center;
+}
+
+.subText1 {
+  margin-bottom: 1.3vw;
+}
+
+.subText2 {
+  margin-bottom: 5vw;
+}
+
+.subText3 {
+  margin-bottom: 3vw;
+}
+
+/* === ФОРМА === */
+.subscribeForm {
+  display: flex;
+  flex-direction: row; /* ряд! */
+  justify-content: center;
+  align-items: center;
+  gap: 0.8vw;
+  width: 100%;
+  max-width: 40vw;
+  margin: 0 auto;
+}
+
+.subscribeForm input {
+  flex: 1; /* тянется */
+  padding: 0.9vw 1.2vw;
+  font-size: 0.97vw;
+  background-color: #000;
+  color: #fff;
+  border: 0.07vw solid rgba(255, 255, 255, 0.6);
+  outline: none;
+
+  transition: border 0.3s;
+}
+
+.subscribeForm input::placeholder {
+  color: #b6b3b3;
+}
+
+.subscribeForm button {
+  flex-shrink: 0; /* не растягивается */
+  padding: 0.9vw 1.6vw;
+  background: rgb(220, 202, 135);
+  color: #000;
+  font-size: 0.9vw;
+  font-weight: bold;
+  border: none;
+ 
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribeForm button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+
+   .lineLogo {
+    padding: 4vw;
+    width: 100vw; /* логотип чуть больше пропорционально */
+  }
+
+
+  .subscribeForm {
+    flex-direction: row; /* всё ещё в ряд! */
+    max-width: 80vw;
+  }
+
+  .subscribeForm input {
+    padding: 1.2vw 1.6vw;
+    font-size: 1.3vw;
+  }
+
+  .subscribeForm button {
+    padding: 1.2vw 1.6vw;
+    font-size: 1.3vw;
+  }
+}
+
+/* Мобильные */
+@media (max-width: 768px) {
+
+.lineBlock {
+    top: -6vh; /* подвинуть чуть ниже */
+  }
+
+  .lineLogo {
+    width: 100vw; /* занимает больше экрана, но не 100% */
+  }
+
+
+  .subscribeForm {
+    flex-direction: column; /* теперь в колонку */
+    max-width: 90vw;
+    gap: 3vw;
+  }
+
+  .subscribeForm input,
+  .subscribeForm button {
+    width: 100%;
+    font-size: 3.5vw;
+    padding: 3vw;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .lineBlock {
+    top: -3.5vh;
+  }
+
+  .lineLogo {
+    width: 100vw; /* почти весь экран */
+  }
+}

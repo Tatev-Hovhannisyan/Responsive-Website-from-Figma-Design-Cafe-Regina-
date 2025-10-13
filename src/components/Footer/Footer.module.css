@@ -1,0 +1,34 @@
+.footerWrapper {
+  width: 100%;
+  margin-top: 0; /* без отступа сверху */
+}
+
+.footer {
+  width: 100%;      /* тянется на всю ширину */
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .footer {
+    max-width: 100%;
+  }
+}
+
+/* Мобильные */
+@media (max-width: 768px) {
+  .footer {
+    max-width: 100%;
+  }
+}
+
+/* Маленькие телефоны */
+@media (max-width: 480px) {
+  .footer {
+    max-width: 100%;
+  }
+}

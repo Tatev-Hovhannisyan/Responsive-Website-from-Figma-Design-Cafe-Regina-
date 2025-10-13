@@ -1,0 +1,212 @@
+ .hero {
+width: 100vw;
+overflow: hidden;
+/* 1123px ≈ 87.73vw. Даем большую высоту, чтобы вместить все элементы. */
+height: 87.73vw; 
+background-image: url("../../assets/HeroImages/Mask Group.png");
+/* 110px ≈ 8.6vw */
+background-position: top 8.6vw; 
+background-size: cover;
+background-repeat: no-repeat;
+ margin-left: calc(50% - 50vw);
+position: relative;
+}
+
+.hero::before {
+content: "";
+position: absolute;
+inset: 0;
+background: rgba(0, 0, 0, 0.5);
+z-index: 0;
+}
+
+.heroImages {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.56vw;
+  z-index: 2;
+}
+
+.imagetext {
+display: block;
+max-width: 100%;
+height: auto;
+/* Центрирование */
+margin-left: 3vw;
+margin-right: auto;
+position: relative;
+/* 80px ≈ 6.25vw */
+transform: translateY(12.25vw); 
+z-index: 2;
+width: 23vw;
+}
+
+
+.heroImageWrapper {
+  position: relative;
+  width: 100vw;       /* ✅ занимает всю ширину окна */
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  z-index: 2;
+  gap: 1.56vw;
+  overflow: hidden;   /* ✅ чтобы не появлялся горизонтальный скролл */
+}
+
+
+.heroImageWrapper img {
+object-fit: contain;
+max-width: 100%;
+height: auto;
+} 
+
+/* ---------------------------------------------------- */
+/* НАСТРОЙКА ИЗОБРАЖЕНИЙ (VW) - ДИАГОНАЛЬНОЕ ПОЗИЦИОНИРОВАНИЕ */
+/* ---------------------------------------------------- */
+
+.imgLeft {
+  width: 20vw;
+  height: 29.14vw;
+  margin-top: 33vw;   /* ✅ вместо top */
+}
+
+.imgCenter {
+  width: 45.78vw;
+  height: 69.2vw;
+  margin-top: 0vw;  /* ✅ вместо top */
+}
+
+.imgRight {
+  width: 21.01vw;
+  height: 31.4vw;
+  margin-top: -35vw;   /* ✅ вместо top */
+}
+
+
+
+/* ---------------------------------------------------- */
+/* Hero Image Wrapper */
+/* ---------------------------------------------------- */
+
+
+
+
+/* ---------------------------------------------------- */
+/* ПАГИНАЦИЯ (VW) */
+/* ---------------------------------------------------- */
+
+.pagination {
+/* 586px ≈ 45.78vw */
+width: 45.78vw; 
+position: absolute;
+/* -90px ≈ -7.03vw */
+bottom: -7.03vw; 
+left: 50%;
+transform: translateX(-50%); 
+display: flex;
+/* 36px ≈ 2.81vw */
+gap: 2.81vw; 
+/* 18px ≈ 1.4vw */
+font-size: 1.4vw; 
+font-weight: 500;
+color: #888;
+justify-content: center;
+}
+
+.pagination span {
+cursor: pointer;
+transition: color 0.3s;
+}
+
+.pagination span:hover {
+color: #fff;
+}
+
+.pagination .active {
+color: rgb(220, 202, 135);
+font-weight: bold;
+}
+
+/* ---------------------------------------------------- */
+/* ТЕКСТОВЫЕ БЛОКИ И КНОПКА (VW) - НОВОЕ ПОЗИЦИОНИРОВАНИЕ */
+/* ---------------------------------------------------- */
+
+.textMain {
+position: absolute;
+/* Перемещено вверх, чтобы быть на центральном изображении */
+top: 40vw; 
+left: 50%;
+transform: translate(-50%, -50%); /* Центрирование */
+z-index: 2;
+/* 950px ≈ 74.2vw */
+width: 60vw; 
+height: auto; 
+}
+
+
+
+.textSub {
+position: absolute;
+/* -30px ≈ -2.34vw */
+right: 3.5vw; 
+/* Перемещено ниже imgRight */
+top: 47vw; 
+width: 17vw;
+height: auto;
+margin: 0;
+z-index: 2;
+}
+
+.contactRow {
+position: absolute;
+/* -30px ≈ -2.34vw */
+right: 4.5vw; 
+/* Перемещено ниже textSub */
+top:60vw; 
+display: flex;
+flex-direction: row;
+align-items: center;
+/* 35px ≈ 2.73vw */
+gap: 2.73vw; 
+z-index: 2;
+}
+
+.contactLabel {
+/* 18px ≈ 1.4vw */
+font-size: 1.4vw; 
+color: rgb(220, 202, 135);
+/* 4px ≈ 0.31vw */
+letter-spacing: 0.31vw; 
+margin: 0;
+}
+
+.circleBtn {
+ display: inline-flex;
+justify-content: center;
+align-items: center;
+/* 47px ≈ 3.67vw */
+width: 3.67vw; 
+height: 3.67vw;
+border-radius: 50%;
+background-color: #ffffff20;
+color: white;
+/* 32px ≈ 2.5vw */
+font-size: 2.5vw; 
+font-weight: bold;
+text-decoration: none;
+transition: background-color 0.3s, color 0.3s;
+position: relative;
+z-index: 5;
+}
+
+.circleBtn:hover {
+background-color: rgb(207, 198, 198);
+color: black;
+}
+
+  

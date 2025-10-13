@@ -1,0 +1,133 @@
+/* PhotoGallery.module.css */
+.divider {
+  width: 100%;
+  height: 0.13vh; /* 1px → vh */
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0;
+  border: none;
+}
+
+.gallery {
+  display: flex;
+  width: 100%;
+  gap: 2.93vw; /* 40px → vw */
+  padding: 19.53vh 1.46vw; /* 150px → vh, 20px → vw */
+  box-sizing: border-box;
+  background-color: #0D0C0A;
+  overflow: hidden;
+}
+
+/* Левая часть */
+.left {
+  flex: 0 0 25.63vw; /* 350px → vw */
+  display: flex;
+  flex-direction: column;
+  gap: 1.46vw; /* 20px → vw */
+}
+
+.textImg {
+  width: 100%;
+  height: auto;
+}
+
+.controls {
+  display: flex;
+  gap: 1.1vw; /* 15px → vw */
+}
+
+.circleBtn {
+  width: 3.51vw; /* 48px → vw */
+  height: 3.51vw;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: #333;
+  color: #fff;
+  font-size: 1.46vw; /* 20px → vw */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.circleBtn:hover {
+  background: #555;
+}
+
+/* Правая часть */
+.right {
+  flex: 1;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 0.73vw; /* 10px → vw */
+  transition: transform 0.35s ease;
+}
+
+.photoWrapper {
+  flex: 0 0 auto;
+  width: clamp(8.78vw, 15vw, 16.18vw); /* 120px, 221px → vw */
+  height: clamp(23.44vh, 25vw, 42.71vh); /* 180px → vh, 328px → vh */
+}
+
+.photoWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .gallery {
+    flex-direction: column;
+    padding: 10.78vh; /* 80px → vh */
+    gap: 1.46vw; /* 20px → vw */
+  }
+
+  .left {
+    flex: 0 0 auto;
+    align-items: center;
+    width: 58.63vw; /* 80% от 1366px */
+  }
+
+  .photoWrapper {
+    width: clamp(8.78vw, 40vw, 13.18vw); /* 120px, 180px → vw */
+    height: clamp(23.44vh, 50vw, 35.16vh); /* 180px, 270px → vh */
+  }
+
+  .circleBtn {
+    width: 2.93vw; /* 40px → vw */
+    height: 2.93vw;
+    font-size: 1.32vw; /* 18px → vw */
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    gap: 1.1vw; /* 15px → vw */
+    padding: 3.9vh; /* 15px → vh */
+  }
+
+  .photoWrapper {
+    width: clamp(7.32vw, 45vw, 10.98vw); /* 100px, 150px → vw */
+    height: clamp(19.53vh, 55vw, 16.67vh); /* 150px, 220px → vh */
+  }
+
+  .circleBtn {
+    width: 2.56vw; /* 35px → vw */
+    height: 2.56vw;
+    font-size: 1.17vw; /* 16px → vw */
+  }
+}
+
+@media (max-width: 480px) {
+  .photoWrapper {
+    width: clamp(5.86vw, 60vw, 8.78vw); /* 80px, 120px → vw */
+    height: clamp(15.63vh, 70vw, 12.5vh); /* 120px, 180px → vh */
+  }
+
+  .circleBtn {
+    width: 2.2vw; /* 30px → vw */
+    height: 2.2vw;
+    font-size: 0.97vw; /* 14px → vw */
+  }
+}
