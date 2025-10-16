@@ -7,7 +7,7 @@ It represents a **Cafe Regina** concept website and is created as part of my **f
 
 ## 🌐 Live Demo
 
-https://responsive-website-from-figma-desig.vercel.app
+ https://tatev-hovhannisyan.github.io/Responsive-Website-from-Figma-Design-Cafe-Regina-/
 
 
 ---
@@ -18,7 +18,7 @@ https://responsive-website-from-figma-desig.vercel.app
 - CSS3 / Flexbox / Grid
 - Responsive Design
 - React + Vite
-- Vercel Deployment
+
 
 ---
 
