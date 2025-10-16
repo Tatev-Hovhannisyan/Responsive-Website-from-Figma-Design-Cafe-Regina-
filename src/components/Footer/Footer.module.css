@@ -4,13 +4,12 @@
 }
 
 .footer {
-  width: 100%;      /* тянется на всю ширину */
+  width: 100%; /* тянется на всю ширину */
   height: auto;
   display: block;
   margin: 0;
   padding: 0;
 }
-
 
 /* Планшеты */
 @media (max-width: 1024px) {

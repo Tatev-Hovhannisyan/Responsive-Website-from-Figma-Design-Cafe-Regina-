@@ -43,7 +43,6 @@
 
 .logoLeft {
   left: 0;
-  
 }
 
 .logoRight {
@@ -58,7 +57,6 @@
   display: block;
   filter: brightness(1.8) contrast(1.2);
 }
-
 
 .eventsHeading {
   display: block;
@@ -107,7 +105,7 @@
 }
 
 .eventDate {
- font-size: clamp(1.2vw, 1.5vw, 1.9vw);/* пропорционально */
+  font-size: clamp(1.2vw, 1.5vw, 1.9vw); /* пропорционально */
   font-weight: lighter;
   color: #a3a2a2;
   margin: 0.390625vw 0;
@@ -173,7 +171,6 @@
     transform: none;
   }
 
- 
   .logoLeft,
   .logoRight {
     display: none;

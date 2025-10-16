@@ -40,22 +40,20 @@ const SecondBlock = () => {
           <div className={styles.textBlock}>
             <img src={text2} alt="Text Top Right" />
             <div className={styles.menuRow}>
-                     <p className={styles.contactLabel}>ALL MENU</p>
-          <Link to="/drinks" className={styles.readMoreLink}>
-            <span className={styles.circleBtn}>→</span>
-          </Link>
-      
-             
+              <p className={styles.contactLabel}>ALL MENU</p>
+              <Link to="/drinks" className={styles.readMoreLink}>
+                <span className={styles.circleBtn}>→</span>
+              </Link>
             </div>
           </div>
 
           <div className={styles.textBlock}>
             <img src={text4} alt="Text Bottom Right" />
             <div className={styles.menuRow}>
-                         <p className={styles.contactLabel}>ALL MENU</p>
-          <Link to="/hunger" className={styles.readMoreLink}>
-            <span className={styles.circleBtn}>→</span>
-          </Link>
+              <p className={styles.contactLabel}>ALL MENU</p>
+              <Link to="/hunger" className={styles.readMoreLink}>
+                <span className={styles.circleBtn}>→</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -68,7 +66,11 @@ const SecondBlock = () => {
 
       {/* Центр-блок */}
       <div className={styles.centerBlock}>
-        <img src={centerTextImg}   className={styles.centerTextImg} alt="Text Image" />
+        <img
+          src={centerTextImg}
+          className={styles.centerTextImg}
+          alt="Text Image"
+        />
         <div className={styles.readMoreRow}>
           <p className={styles.contactLabel}>READ MORE</p>
           <Link to="/read-more" className={styles.readMoreLink}>

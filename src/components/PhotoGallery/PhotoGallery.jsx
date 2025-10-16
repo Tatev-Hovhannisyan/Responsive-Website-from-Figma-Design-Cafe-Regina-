@@ -28,7 +28,9 @@ const PhotoGallery = () => {
   useEffect(() => {
     const updateWidth = () => {
       if (sliderRef.current) {
-        const firstCard = sliderRef.current.querySelector(`.${styles.photoWrapper}`);
+        const firstCard = sliderRef.current.querySelector(
+          `.${styles.photoWrapper}`
+        );
         if (firstCard) {
           const computed = firstCard.offsetWidth;
           setCardWidth(computed + 10); // + gap
@@ -57,8 +59,12 @@ const PhotoGallery = () => {
         <div className={styles.left}>
           <img src={textImg} alt="Text" className={styles.textImg} />
           <div className={styles.controls}>
-            <button onClick={handlePrev} className={styles.circleBtn}>←</button>
-            <button onClick={handleNext} className={styles.circleBtn}>→</button>
+            <button onClick={handlePrev} className={styles.circleBtn}>
+              ←
+            </button>
+            <button onClick={handleNext} className={styles.circleBtn}>
+              →
+            </button>
           </div>
         </div>
 

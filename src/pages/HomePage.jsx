@@ -4,7 +4,6 @@ import EventsBlock from "../components/EventBlock/Events";
 import PhotoGallery from "../components/PhotoGallery/PhotoGallery";
 import SubscribeBlock from "../components/SubscribeBlock/SubscribeBlock";
 
-
 export default function HomePage() {
   return (
     <>
@@ -13,7 +12,6 @@ export default function HomePage() {
       <EventsBlock />
       <PhotoGallery />
       <SubscribeBlock />
-   
     </>
   );
 }

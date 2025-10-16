@@ -104,7 +104,7 @@
   font-size: 0.9vw;
   font-weight: bold;
   border: none;
- 
+
   cursor: pointer;
   transition: 0.3s;
 }
@@ -116,12 +116,10 @@
 
 /* Планшеты */
 @media (max-width: 1024px) {
-
-   .lineLogo {
+  .lineLogo {
     padding: 4vw;
     width: 100vw; /* логотип чуть больше пропорционально */
   }
-
 
   .subscribeForm {
     flex-direction: row; /* всё ещё в ряд! */
@@ -141,15 +139,13 @@
 
 /* Мобильные */
 @media (max-width: 768px) {
-
-.lineBlock {
+  .lineBlock {
     top: -6vh; /* подвинуть чуть ниже */
   }
 
   .lineLogo {
     width: 100vw; /* занимает больше экрана, но не 100% */
   }
-
 
   .subscribeForm {
     flex-direction: column; /* теперь в колонку */
@@ -164,7 +160,6 @@
     padding: 3vw;
   }
 }
-
 
 @media (max-width: 480px) {
   .lineBlock {

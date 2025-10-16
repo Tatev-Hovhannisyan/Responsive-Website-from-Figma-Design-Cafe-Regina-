@@ -41,7 +41,6 @@ export default function PhotosPage() {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className={pageStyles.headerContainer}>
-         
           <hr className={pageStyles.divider} />
         </div>
 

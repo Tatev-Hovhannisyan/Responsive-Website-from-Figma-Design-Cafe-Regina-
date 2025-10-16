@@ -20,7 +20,6 @@ const ReadMore = () => {
 
         {/* Теперь row стоит НАД фоном, фон снизу не давит */}
         <div className={pageStyles.readMoreRow}>
-      
           <Link to="/" className={pageStyles.readMoreLink}>
             <span className={pageStyles.circleBtn}> ←</span>
             BACK TO HOME

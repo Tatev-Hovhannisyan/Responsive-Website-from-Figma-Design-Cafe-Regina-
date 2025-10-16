@@ -57,7 +57,6 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.heroContent}>
-  
         <img
           src={imagetext}
           alt="Cafe Regina Text"

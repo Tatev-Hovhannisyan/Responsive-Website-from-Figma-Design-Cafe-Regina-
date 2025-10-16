@@ -10,7 +10,7 @@
 }
 
 .contactBox {
-  background: #0D0C0A;
+  background: #0d0c0a;
   padding: 40px;
   max-width: 500px;
   width: 100%;
@@ -80,13 +80,10 @@
   border: none;
   cursor: pointer;
   transition: background 0.2s;
-  margin: 0 auto;  /* центрирование */
+  margin: 0 auto; /* центрирование */
   display: block;
 }
 
 .sendBtn:hover {
   background: #ddc87a;
 }
-
-
-

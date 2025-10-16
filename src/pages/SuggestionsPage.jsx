@@ -15,7 +15,6 @@ export default function SuggestionsPage() {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className={pageStyles.headerContainer}>
-
           <hr className={pageStyles.divider} />
         </div>
 
@@ -30,8 +29,15 @@ export default function SuggestionsPage() {
         </div>
       </div>
 
-      <div className={pageStyles.drinksText2Wrapper} style={{ justifyContent: "center" }}>
-        <img src={text2} alt="Suggestions 2" className={pageStyles.drinksText2} />
+      <div
+        className={pageStyles.drinksText2Wrapper}
+        style={{ justifyContent: "center" }}
+      >
+        <img
+          src={text2}
+          alt="Suggestions 2"
+          className={pageStyles.drinksText2}
+        />
       </div>
 
       <SubscribeBlock />

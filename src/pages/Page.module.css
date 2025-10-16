@@ -109,7 +109,6 @@ body > *:first-child {
 
 /* ========== GALLERY ========== */
 .galleryGrid {
-
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1.04vw; /* 15px */
@@ -140,7 +139,6 @@ body > *:first-child {
   font-size: 0.97vw; /* 14px */
   color: #aaa;
   transition: color 0.3s;
-  
 }
 
 .pagination span:hover {
@@ -153,7 +151,7 @@ body > *:first-child {
 }
 
 .controls {
-    padding: 4vw;
+  padding: 4vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,8 +171,8 @@ body > *:first-child {
 }
 
 .circleBtn:hover {
-  border-color:  rgb(220, 202, 135);;
-  color: rgb(220, 202, 135);;
+  border-color: rgb(220, 202, 135);
+  color: rgb(220, 202, 135);
 }
 
 .active {
@@ -244,12 +242,19 @@ body > *:first-child {
   width: 100%;
   height: 0.14vw; /* 2px */
   background: #969493;
-  mask: radial-gradient(circle 0.83vw at var(--indicator-left, 50%) 100%, transparent 70%, black 71%);
-  -webkit-mask: radial-gradient(circle 0.83vw at var(--indicator-left, 50%) 100%, transparent 70%, black 71%);
+  mask: radial-gradient(
+    circle 0.83vw at var(--indicator-left, 50%) 100%,
+    transparent 70%,
+    black 71%
+  );
+  -webkit-mask: radial-gradient(
+    circle 0.83vw at var(--indicator-left, 50%) 100%,
+    transparent 70%,
+    black 71%
+  );
   z-index: 2;
   transition: mask-position 0.3s ease, -webkit-mask-position 0.3s ease;
 }
-
 
 svg {
   position: absolute;
@@ -358,7 +363,6 @@ svg {
   background: #dcca87;
 }
 
-
 /* ========== READ MORE CONTAINER ========== */
 .bg {
   background: url("../assets/HeroImages/Mask Group.png") no-repeat center center;
@@ -370,29 +374,29 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 1vw;
-  
+
   padding: 2.5vh 3vw;
   border-top: 1.5px solid rgba(255, 255, 255, 0.4);
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.4);
-  background: rgba(0, 0, 0, 0.6); /* полупрозрачная подложка, чтобы линии были видны */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* полупрозрачная подложка, чтобы линии были видны */
   width: 100vw;
   box-sizing: border-box;
- 
 }
-
 
 .readMoreLink {
   display: flex;
-   letter-spacing: 0.5vw;
-   font-family:  "Inter", sans-serif;;
+  letter-spacing: 0.5vw;
+  font-family: "Inter", sans-serif;
   align-items: center;
   gap: 2.5vw;
   text-decoration: none;
-  color: rgb(220, 202, 135);;
+  color: rgb(220, 202, 135);
 }
-
-
-
 
 .readMoreContainer {
   background: #0d0c0a;
@@ -401,23 +405,18 @@ svg {
   justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
-  width: 100%;             /* full width родителя */
-  max-width: 1900px;       /* ограничение ширины */
-  padding: 3vh 3vw 5vh;    /* верхний padding меньше, чтобы не налезал на ссылку */
+  width: 100%; /* full width родителя */
+  max-width: 1900px; /* ограничение ширины */
+  padding: 3vh 3vw 5vh; /* верхний padding меньше, чтобы не налезал на ссылку */
   box-sizing: border-box;
 }
 
-
-
 .readMoreContainer img {
   display: block;
-  max-width: 100%;         /* изображение не выйдет за контейнер */
+  max-width: 100%; /* изображение не выйдет за контейнер */
   height: auto;
-  margin: 2vh 0;  
- }
-
-
-
+  margin: 2vh 0;
+}
 
 /* === Медиазапросы === */
 

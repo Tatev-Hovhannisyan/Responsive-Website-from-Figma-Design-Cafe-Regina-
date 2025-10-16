@@ -2,7 +2,6 @@ import { useState } from "react";
 import styles from "./ContactBox.module.css";
 import text2 from "../../assets/Pages/Frame 33.png";
 
-
 export default function ContactBox() {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -44,11 +43,9 @@ export default function ContactBox() {
 
   return (
     <div className={styles.contactWrapper}>
-
-       
       <form className={styles.contactBox} onSubmit={handleSubmit}>
-         <img src={text2} alt="Contact Us" className={styles.contactImage} />
-         
+        <img src={text2} alt="Contact Us" className={styles.contactImage} />
+
         <div className={styles.row}>
           <input
             type="text"

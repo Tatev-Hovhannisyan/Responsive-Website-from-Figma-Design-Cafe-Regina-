@@ -13,11 +13,36 @@ import event4 from "../../assets/Events/4.svg";
 import event5 from "../../assets/Events/5.svg";
 
 const eventsData = [
-  { img: event1, date: "12 SEP 2025", title: "Wine Evening", desc: "Lorem Ipsum is simply dummy text." },
-  { img: event2, date: "18 SEP 2025", title: "Jazz Night", desc: "Lorem Ipsum is simply dummy text." },
-  { img: event3, date: "25 SEP 2025", title: "Coffee Workshop", desc: "Lorem Ipsum is simply dummy text." },
-  { img: event4, date: "30 SEP 2025", title: "Beer Tasting", desc: "Lorem Ipsum is simply dummy text." },
-  { img: event5, date: "05 OCT 2025", title: "Cocktail Party", desc: "Lorem Ipsum is simply dummy text." },
+  {
+    img: event1,
+    date: "12 SEP 2025",
+    title: "Wine Evening",
+    desc: "Lorem Ipsum is simply dummy text.",
+  },
+  {
+    img: event2,
+    date: "18 SEP 2025",
+    title: "Jazz Night",
+    desc: "Lorem Ipsum is simply dummy text.",
+  },
+  {
+    img: event3,
+    date: "25 SEP 2025",
+    title: "Coffee Workshop",
+    desc: "Lorem Ipsum is simply dummy text.",
+  },
+  {
+    img: event4,
+    date: "30 SEP 2025",
+    title: "Beer Tasting",
+    desc: "Lorem Ipsum is simply dummy text.",
+  },
+  {
+    img: event5,
+    date: "05 OCT 2025",
+    title: "Cocktail Party",
+    desc: "Lorem Ipsum is simply dummy text.",
+  },
 ];
 
 export default function Events() {
@@ -60,8 +85,12 @@ export default function Events() {
         />
 
         <div className={styles.sliderControls}>
-          <button className={styles.circleBtn} onClick={prev}>←</button>
-          <button className={styles.circleBtn} onClick={next}>→</button>
+          <button className={styles.circleBtn} onClick={prev}>
+            ←
+          </button>
+          <button className={styles.circleBtn} onClick={next}>
+            →
+          </button>
         </div>
 
         <img src={logoRight} alt="Right Logo" className={styles.logoRight} />
@@ -83,11 +112,11 @@ export default function Events() {
               <h3 className={styles.eventTitle}>{event.title}</h3>
               <p className={styles.eventDesc}>{event.desc}</p>
 
-             <div className={styles.readMoreRow}>
-  <Link to="/read-more" className={styles.readMoreLink}>
-    <span className={styles.contactLabel}>READ MORE</span>
-  </Link>
-</div>
+              <div className={styles.readMoreRow}>
+                <Link to="/read-more" className={styles.readMoreLink}>
+                  <span className={styles.contactLabel}>READ MORE</span>
+                </Link>
+              </div>
             </div>
           ))}
         </div>

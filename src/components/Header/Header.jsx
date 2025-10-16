@@ -23,7 +23,7 @@ export default function Header() {
 
         {/* КНОПКА-ГАМБУРГЕР */}
         <div
-          className={`${styles.menuToggle} ${isMenuOpen ? styles.active : ''}`}
+          className={`${styles.menuToggle} ${isMenuOpen ? styles.active : ""}`}
           onClick={toggleMenu}
         >
           <span></span>
@@ -32,15 +32,45 @@ export default function Header() {
         </div>
 
         {/* МЕНЮ: Добавляем класс menuOpen, если меню открыто */}
-        <nav className={`${styles.mainNav} ${isMenuOpen ? styles.menuOpen : ''}`}>
+        <nav
+          className={`${styles.mainNav} ${isMenuOpen ? styles.menuOpen : ""}`}
+        >
           <ul>
-            <li><Link to="/" onClick={closeMenu}>HOME</Link></li>
-            <li><Link to="/drinks" onClick={closeMenu}>DRINKS</Link></li>
-            <li><Link to="/hunger" onClick={closeMenu}>SMALL HUNGER</Link></li>
-            <li><Link to="/suggestions" onClick={closeMenu}>SUGGESTIONS</Link></li>
-            <li><Link to="/photos" onClick={closeMenu}>PHOTOS</Link></li>
-            <li><Link to="/about" onClick={closeMenu}>ABOUT US</Link></li>
-            <li><Link to="/contact" onClick={closeMenu}>CONTACT US</Link></li>
+            <li>
+              <Link to="/" onClick={closeMenu}>
+                HOME
+              </Link>
+            </li>
+            <li>
+              <Link to="/drinks" onClick={closeMenu}>
+                DRINKS
+              </Link>
+            </li>
+            <li>
+              <Link to="/hunger" onClick={closeMenu}>
+                SMALL HUNGER
+              </Link>
+            </li>
+            <li>
+              <Link to="/suggestions" onClick={closeMenu}>
+                SUGGESTIONS
+              </Link>
+            </li>
+            <li>
+              <Link to="/photos" onClick={closeMenu}>
+                PHOTOS
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={closeMenu}>
+                ABOUT US
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={closeMenu}>
+                CONTACT US
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

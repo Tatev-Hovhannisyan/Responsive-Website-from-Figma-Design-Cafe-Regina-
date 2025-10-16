@@ -15,7 +15,6 @@ export default function HungerPage() {
         style={{ backgroundImage: `url(${bg})` }}
       >
         <div className={pageStyles.headerContainer}>
-   
           <hr className={pageStyles.divider} />
         </div>
 
@@ -30,7 +29,10 @@ export default function HungerPage() {
         </div>
       </div>
 
-      <div className={pageStyles.drinksText2Wrapper} style={{ justifyContent: "center" }}>
+      <div
+        className={pageStyles.drinksText2Wrapper}
+        style={{ justifyContent: "center" }}
+      >
         <img src={text2} alt="Drinks 2" className={pageStyles.drinksText2} />
       </div>
 

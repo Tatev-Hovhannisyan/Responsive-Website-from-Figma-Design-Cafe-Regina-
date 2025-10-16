@@ -105,57 +105,56 @@ export default function AboutPage() {
       </div>
 
       <div
-  className={`${pageStyles.timelineAndSubscribeWrapper} ${pageStyles.aboutPageWrapper}`}
->
-  <div className={pageStyles.timelineWrapper}>
-    <div className={pageStyles.timeline}>
-      <div className={pageStyles.timelineContent}>
-        <div className={pageStyles.timelineHeader}>
-          <div className={pageStyles.years}>
-            {timelineData.map((item, i) => (
-              <span
-                key={item.year}
-                ref={(el) => (yearsRef.current[i] = el)}
-                className={`${pageStyles.year} ${
-                  activeYear === item.year ? pageStyles.activeYear : ""
-                }`}
-                onClick={() => setActiveYear(item.year)}
-              >
-                {item.year}
-              </span>
-            ))}
+        className={`${pageStyles.timelineAndSubscribeWrapper} ${pageStyles.aboutPageWrapper}`}
+      >
+        <div className={pageStyles.timelineWrapper}>
+          <div className={pageStyles.timeline}>
+            <div className={pageStyles.timelineContent}>
+              <div className={pageStyles.timelineHeader}>
+                <div className={pageStyles.years}>
+                  {timelineData.map((item, i) => (
+                    <span
+                      key={item.year}
+                      ref={(el) => (yearsRef.current[i] = el)}
+                      className={`${pageStyles.year} ${
+                        activeYear === item.year ? pageStyles.activeYear : ""
+                      }`}
+                      onClick={() => setActiveYear(item.year)}
+                    >
+                      {item.year}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Индикатор */}
+                <svg
+                  width="20"
+                  height="10"
+                  style={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: indicatorLeft,
+                    transform: "translateX(-47%) translateY(-390%)",
+                    transition: "left 0.3s ease",
+                  }}
+                >
+                  <polyline
+                    points="0,11 10,0 18,10"
+                    fill="transparent"
+                    stroke="#969493"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </div>
+
+              <div className={pageStyles.yearText}>
+                {timelineData.find((item) => item.year === activeYear)?.text}
+              </div>
+            </div>
           </div>
-
-          {/* Индикатор */}
-          <svg
-            width="20"
-            height="10"
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: indicatorLeft,
-              transform: "translateX(-47%) translateY(-390%)",
-              transition: "left 0.3s ease",
-            }}
-          >
-            <polyline
-              points="0,11 10,0 18,10"
-              fill="transparent"
-              stroke="#969493"
-              strokeWidth="2"
-            />
-          </svg>
         </div>
-
-        <div className={pageStyles.yearText}>
-          {timelineData.find((item) => item.year === activeYear)?.text}
-        </div>
+        <SubscribeBlock />
       </div>
-    </div>
-  </div>
-  <SubscribeBlock />
-</div>
-
     </>
   );
 }
