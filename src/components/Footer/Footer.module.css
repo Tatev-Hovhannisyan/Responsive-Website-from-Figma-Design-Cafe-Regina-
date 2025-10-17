@@ -1,11 +1,14 @@
 .footerWrapper {
   width: 100%;
-  height: 404px; /* ✅ Укажи нужную высоту! */
-  background-image: url("/footer.svg"); /* ✅ Путь из public */
-  background-size: cover; /* или contain / 100% 100%, в зависимости от дизайна */
+  background-image: url("/footer.svg");
+  background-size: cover; /* или contain — попробуй обе версии */
   background-repeat: no-repeat;
   background-position: center;
+
+  /* ✅ Адаптивность через соотношение сторон */
+  aspect-ratio: 6 / 1; /* Подбери цифры по виду (например, 8/1 или 5/1) */
 }
+
 
 .footer {
   width: 100%; /* тянется на всю ширину */
