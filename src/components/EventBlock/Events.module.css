@@ -86,12 +86,13 @@
   display: flex;
   gap: 1.5625vw;
   transition: transform 0.5s ease;
-  flex-wrap: nowrap;
-  width: max-content;
+  flex-wrap: nowrap;       /* ❗ Важно: всегда в одну строку */
+  width: max-content;      /* Ширина зависит от контента */
 }
 
+
 .eventCard {
-  flex: 0 0 clamp(220px, 18vw, 280px);
+    flex: 0 0 clamp(180px, 14vw, 240px);
   width: auto;
   background: transparent;
   color: #fff;
@@ -150,16 +151,14 @@
 
 @media (max-width: 1024px) {
   .eventsSlider {
-    gap: 1.5625vw;
-    flex-wrap: wrap;
-    justify-content: center;
-    transform: none !important;
-    width: auto;
+    flex-wrap: nowrap !important;  /* ❗ Запрет переносов */
+    justify-content: flex-start;
+    width: max-content;
   }
 
   .eventCard {
-    flex: 0 0 45%;
-    width: auto;
+     flex: 0 0 clamp(180px, 14vw, 240px);
+  width: auto; /* можно сделать чуть шире на телефоне */
   }
 
   .eventCard img {
@@ -183,15 +182,13 @@
 }
 
 @media (max-width: 786px) {
-  .eventsSlider {
-    flex-wrap: wrap;
-    transform: none !important;
-    width: auto;
-    justify-content: center;
+   .eventsSlider {
+    flex-wrap: nowrap !important; /* ❗ Оставляем слайдер */
+    width: max-content;
   }
 
   .eventCard {
-    flex: 0 0 45%;
+       flex: 0 0 45vw; /* 2 карточки в ряд */
     width: auto;
   }
 
@@ -222,6 +219,14 @@
 }
 
 @media (max-width: 600px) {
+    .eventsSlider {
+    flex-wrap: nowrap !important; /* ❗ */
+    width: max-content;
+  }
+
+  .eventCard {
+       flex: 0 0 48vw;
+  }
   .eventHeader {
     width: 100%;
   }
