@@ -1,6 +1,10 @@
 .footerWrapper {
   width: 100%;
-  margin-top: 0; /* без отступа сверху */
+  height: 404px; /* ✅ Укажи нужную высоту! */
+  background-image: url("/footer.svg"); /* ✅ Путь из public */
+  background-size: cover; /* или contain / 100% 100%, в зависимости от дизайна */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer {
